@@ -27,13 +27,32 @@ matrix:
       script: bin/test quality
       env:
         - TEST_QUALITY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      script: bin/test quality
+      env:
+        - TEST_QUALITY="true"
     - python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - TEST_FLAKE8="true"
+    - arch: arm64
+      python: 3.8
       dist: xenial
       sudo: true
       env:
         - TEST_FLAKE8="true"
 
     - stage: baseline
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - TEST_DOCTESTS="true" FASTCACHE="false" TEST_SETUP="true" TEST_EXAMPLES="true"
+    - arch: arm64
       python: 3.8
       dist: xenial
       sudo: true
@@ -49,6 +68,54 @@ matrix:
       sudo: true
       env:
         - SPLIT="2/2" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - SPLIT="1/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - SPLIT="2/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - SPLIT="3/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - SPLIT="4/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - SPLIT="5/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - SPLIT="6/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - SPLIT="7/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      sudo: true
+      env:
+        - SPLIT="8/8" TEST_SYMPY="true"
     - python: 3.7
       dist: xenial
       # At the time of writing this is Python 3.7 but it will become 3.8 when
@@ -67,14 +134,24 @@ matrix:
             - liblapack-dev
             - gfortran
             - python-scipy
-
     - stage: test
       python: 2.7
       dist: xenial
       sudo: true
       env:
         - TEST_PY2_IMPORT="true"
+    - arch: arm64
+      python: 2.7
+      dist: xenial
+      sudo: true
+      env:
+        - TEST_PY2_IMPORT="true"
     - python: 3.7
+      dist: xenial
+      env:
+        - TEST_DOCTESTS="true" FASTCACHE="false" TEST_SETUP="true" TEST_EXAMPLES="true"
+    - arch: arm64
+      python: 3.7
       dist: xenial
       env:
         - TEST_DOCTESTS="true" FASTCACHE="false" TEST_SETUP="true" TEST_EXAMPLES="true"
@@ -86,6 +163,46 @@ matrix:
       dist: xenial
       env:
         - SPLIT="2/2" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.7
+      dist: xenial
+      env:
+        - SPLIT="1/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.7
+      dist: xenial
+      env:
+        - SPLIT="2/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.7
+      dist: xenial
+      env:
+        - SPLIT="3/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.7
+      dist: xenial
+      env:
+        - SPLIT="4/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.7
+      dist: xenial
+      env:
+        - SPLIT="5/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.7
+      dist: xenial
+      env:
+        - SPLIT="6/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.7
+      dist: xenial
+      env:
+        - SPLIT="7/8" TEST_SYMPY="true"
+    - arch: arm64
+      python: 3.7
+      dist: xenial
+      env:
+        - SPLIT="8/8" TEST_SYMPY="true"
 
     # Tensorflow 1 support
     - python: 3.6
@@ -123,6 +240,54 @@ matrix:
       env:
         - TEST_SLOW="true"
         - SPLIT="2/2"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      env:
+        - TEST_SLOW="true"
+        - SPLIT="1/8"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      env:
+        - TEST_SLOW="true"
+        - SPLIT="2/8"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      env:
+        - TEST_SLOW="true"
+        - SPLIT="3/8"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      env:
+        - TEST_SLOW="true"
+        - SPLIT="4/8"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      env:
+        - TEST_SLOW="true"
+        - SPLIT="5/8"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      env:
+        - TEST_SLOW="true"
+        - SPLIT="6/8"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      env:
+        - TEST_SLOW="true"
+        - SPLIT="7/8"
+    - arch: arm64
+      python: 3.8
+      dist: xenial
+      env:
+        - TEST_SLOW="true"
+        - SPLIT="8/8"
 
     # Code coverage tests
     - python: 3.6
