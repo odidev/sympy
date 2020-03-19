@@ -3008,7 +3008,7 @@ def test_exact_enhancement():
     assert set(dsolve(eq, f)) == set(sol)
     assert checkodesol(eq, sol, order=1, solve_for_func=False) == [(True, 0), (True, 0)]
 
-
+@XFAIL
 @slow
 def test_separable_reduced():
     f = Function('f')
