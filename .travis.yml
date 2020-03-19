@@ -163,46 +163,6 @@ matrix:
       dist: xenial
       env:
         - SPLIT="2/2" TEST_SYMPY="true"
-    - arch: arm64
-      python: 3.7
-      dist: xenial
-      env:
-        - SPLIT="1/8" TEST_SYMPY="true"
-    - arch: arm64
-      python: 3.7
-      dist: xenial
-      env:
-        - SPLIT="2/8" TEST_SYMPY="true"
-    - arch: arm64
-      python: 3.7
-      dist: xenial
-      env:
-        - SPLIT="3/8" TEST_SYMPY="true"
-    - arch: arm64
-      python: 3.7
-      dist: xenial
-      env:
-        - SPLIT="4/8" TEST_SYMPY="true"
-    - arch: arm64
-      python: 3.7
-      dist: xenial
-      env:
-        - SPLIT="5/8" TEST_SYMPY="true"
-    - arch: arm64
-      python: 3.7
-      dist: xenial
-      env:
-        - SPLIT="6/8" TEST_SYMPY="true"
-    - arch: arm64
-      python: 3.7
-      dist: xenial
-      env:
-        - SPLIT="7/8" TEST_SYMPY="true"
-    - arch: arm64
-      python: 3.7
-      dist: xenial
-      env:
-        - SPLIT="8/8" TEST_SYMPY="true"
 
     # Tensorflow 1 support
     - python: 3.6
